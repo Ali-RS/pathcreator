@@ -1,0 +1,40 @@
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+group 'com.jayfella'
+version '1.0'
+
+repositories {
+    jcenter()
+    mavenLocal()
+}
+
+project.ext {
+    // jmeVer = '3.2.4-stable'
+    jmeVer = "663c9776e8b65f95beaf8db1e39f0ac244816fe2"
+}
+
+dependencies {
+
+    implementation "org.jmonkeyengine:jme3-core:$jmeVer"
+    implementation "org.jmonkeyengine:jme3-desktop:$jmeVer"
+
+    implementation "org.jmonkeyengine:jme3-lwjgl:$jmeVer"
+    // implementation "org.jmonkeyengine:jme3-lwjgl3:$jmeVer"
+    // implementation "org.jmonkeyengine:jme3-effects:$jmeVer"
+    // implementation "org.jmonkeyengine:jme3-jogg:$jmeVer"
+    // implementation "org.jmonkeyengine:jme3-plugins:$jmeVer"
+
+    // implementation "org.jmonkeyengine:jme3-bullet:$jmeVer"
+
+    // implementation "org.jmonkeyengine:jme3-bullet-native:$jmeVer"
+    // implementation "org.jmonkeyengine:jme3-jbullet:$jmeVer"
+
+    compile group: 'org.codehaus.groovy', name: 'groovy-all', version: '2.5.8'
+
+    implementation "com.simsilica:lemur:1.13.1-SNAPSHOT"
+    implementation "com.simsilica:lemur-proto:1.11.1-SNAPSHOT"
+    implementation "com.simsilica:lemur-props:1.1.1-SNAPSHOT"
+}
